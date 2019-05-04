@@ -590,6 +590,14 @@ static OSStatus MIKMIDISynthesizerInstrumentUnitRenderCallback(void *						inRef
 	return [self selectInstrument:instrument error:NULL];
 }
 
+
+- (BOOL)sendBankSelectAndProgramChangeForInstrumentID:(MusicDeviceInstrumentID)instrumentID
+
+{
+	SHOW_STANDARD_DEPRECATION_WARNING;
+	return [self sendBankSelectAndProgramChangeForInstrumentID:instrumentID error:NULL];
+}
+
 #pragma clang diagnostic pop
 
 @end
